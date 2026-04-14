@@ -1,11 +1,68 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const siteTitle = 'Ariga\'s Website';
+const description = 'Astro と GitHub Pages で作ったシンプルな個人サイトです。';
 ---
 
 <Layout>
-	<Welcome />
+  <main class="container">
+    <section class="hero">
+      <h1>{siteTitle}</h1>
+      <p class="description">{description}</p>
+    </section>
+
+    <section class="content">
+      <h2>About</h2>
+      <p>
+        このサイトは Astro を使って作成した静的サイトです。
+        GitHub Pages 上で公開しています。
+      </p>
+
+      <h2>Contents</h2>
+      <ul>
+        <li>Astro の練習</li>
+        <li>Web 技術のメモ</li>
+        <li>作ったものの紹介</li>
+      </ul>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; 2026 Ariga</p>
+    </footer>
+  </main>
 </Layout>
+
+<style>
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .hero {
+    margin-bottom: 2rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .description {
+    color: #555;
+    font-size: 1.1rem;
+  }
+
+  .content h2 {
+    margin-top: 2rem;
+  }
+
+  .footer {
+    margin-top: 3rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ddd;
+    color: #777;
+    font-size: 0.9rem;
+  }
+</style>
